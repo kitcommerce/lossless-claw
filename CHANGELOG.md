@@ -1,5 +1,25 @@
 # @martian-engineering/lossless-claw
 
+## 0.8.0
+
+### Minor Changes
+
+- [#323](https://github.com/Martian-Engineering/lossless-claw/pull/323) [`e781980`](https://github.com/Martian-Engineering/lossless-claw/commit/e781980ee706f5d67c902b903a003eaf7665c8e4) Thanks [@jalehman](https://github.com/jalehman)! - Allow `lcm_expand_query(allConversations: true)` to synthesize bounded answers across multiple conversations, including per-conversation diagnostics for partial or truncated results.
+
+### Patch Changes
+
+- [#332](https://github.com/Martian-Engineering/lossless-claw/pull/332) [`98cb02a`](https://github.com/Martian-Engineering/lossless-claw/commit/98cb02a2acddf177a4989e68887e4bbccf06292a) Thanks [@jalehman](https://github.com/jalehman)! - Clarify `lcm_grep` and `lcm_expand_query` guidance so agents use shorter FTS5 queries, keep natural-language instructions in `prompt`, and avoid over-constraining recall with extra keywords.
+
+- [#344](https://github.com/Martian-Engineering/lossless-claw/pull/344) [`897a953`](https://github.com/Martian-Engineering/lossless-claw/commit/897a953300b35208b894050ac73bc8160a03b0da) Thanks [@jetd1](https://github.com/jetd1)! - Keep compaction summary caps and deterministic fallback truncation within budget for CJK-heavy and emoji-heavy content.
+
+- [#331](https://github.com/Martian-Engineering/lossless-claw/pull/331) [`d7a57c5`](https://github.com/Martian-Engineering/lossless-claw/commit/d7a57c51361307fa27818d14c2c7b426609c9ee8) Thanks [@jalehman](https://github.com/jalehman)! - Recover from malformed legacy `summaries_fts` tables during migration instead of crashing plugin startup.
+
+- [#334](https://github.com/Martian-Engineering/lossless-claw/pull/334) [`71d6d9c`](https://github.com/Martian-Engineering/lossless-claw/commit/71d6d9ce1a0846f85cefd92e6895c7cfaee2350a) Thanks [@100yenadmin](https://github.com/100yenadmin)! - Harden malformed FTS migration recovery so stale trigram tables are cleaned up before other FTS schema probes and startup migrations no longer skip recovery by reusing a cached FTS5 capability check.
+
+- [#172](https://github.com/Martian-Engineering/lossless-claw/pull/172) [`8bf5e7f`](https://github.com/Martian-Engineering/lossless-claw/commit/8bf5e7fb73b02d75350aae7cc47df46f9b425f1a) Thanks [@craigamcw](https://github.com/craigamcw)! - Skip ingesting empty assistant messages from errored or aborted provider responses so they do not accumulate in assembled context and trigger retry loops.
+
+- [#330](https://github.com/Martian-Engineering/lossless-claw/pull/330) [`acf1e02`](https://github.com/Martian-Engineering/lossless-claw/commit/acf1e02ef43efc8f8187d51e37493f152fb9d06b) Thanks [@little-jax](https://github.com/little-jax)! - Restore direct-credential summarizer retries for custom provider aliases and avoid misreporting transient provider failures as `provider_config` errors.
+
 ## 0.7.0
 
 ### Minor Changes
